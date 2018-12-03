@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className='app'>
-        <h1>DevCamp React Starter</h1>
+      <div className='home'>
+        <h1>Course Scheduler</h1>
         <h2>React Redux</h2>
       </div>
     );
   }
 }
+
+export default Home;
