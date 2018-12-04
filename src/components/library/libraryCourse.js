@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Icon from '../icon';
+import Arrow from '../arrow';
 
 class LibraryCourse extends Component {
   render() {
@@ -7,7 +8,7 @@ class LibraryCourse extends Component {
       <div className="library-course">
         <label className="library-course__title">Problem Solving</label>
         { Icon('fas fa-check', 'library-course__icon') }
-        {/* arrow component */}
+        <Arrow className="library-course__arrow"/>
         {/* action button component */}
         {Icon('far fa-plus-square', 'library-course__action')}
         <div className="library-course__description">

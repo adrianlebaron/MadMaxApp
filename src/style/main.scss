@@ -1,30 +1,64 @@
-@import 'variables';
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'montserrat';
+}
 
+body {
+    overflow-x: hidden;
+    font-weight: normal;
 
-.home {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.layout {
     height: 100vh;
-    widows: 100vh;
+    width: 100vw;
+
     display: grid;
-    grid-template-columns: [library-s] 1fr 1fr [library-e schedule-s]  1fr [schedule-e];
-    grid-template-rows: 1fr;
+    grid-template-rows: 20px [title-s] 80px [title-e add-s] 120px [add-e todos-s] 1fr [todos-e];
+    grid-template-columns: 140px [s] 1fr [e] 140px;
+
+    & > * {
+        grid-column: s/e;
+    }
+
+    &__title {
+        grid-row: title-s/title-e;
+    }
+    &__add-todo {
+        grid-row: add-s/add-e;
+        background: rgb(255, 202, 213);
+
+        input,
+        button {
+            height: 40px;
+            font-size: 24px;
+        }
+        input {
+            width: 50%;
+            margin-right: 40px;
+        }
+        button { 
+            width: 130px;
+        }
+    }
+
+    &__todos {
+        grid-row: todos-s/todos-e;
+        background: ghostwhite;
+    }
+
+    background: rgb(196, 238, 254);
 }
 
-
-
-.schedule {
-    grid-column: schedule-s/schedule-e;
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-}
-
-
-.gradient {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(120deg, $color-purple 0%, $color-light-blue 100%);
-    z-index: -10; 
-}
