@@ -1,3 +1,6 @@
+@import 'variables';
+
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -36,11 +39,23 @@ body {
 
 .library {
     grid-column: library-s/library-e;
-    background-color: aquamarine;
+    background-color: darkgreen;
 
 }
 
 .schedule {
     grid-column: schedule-s/schedule-e;
-    background-color: brown;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.gradient {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, $color-purple 0%, color-light-blue 100%);
+    z-index: -10; 
 }
