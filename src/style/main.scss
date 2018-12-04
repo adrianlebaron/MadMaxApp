@@ -13,13 +13,11 @@
 }
 
 
-
 .schedule {
-    grid-column: schedule-s/schedule-e;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
+    display: grid;
+    grid-template-rows: 100px repeat(auto-fit, 1fr);
+    grid-row-gap: 22px;
+} 
 
 .gradient {
     position: absolute;
